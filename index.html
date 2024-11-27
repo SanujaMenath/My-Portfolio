@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,3 +136,211 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="icon"
+      href="images/profile_image.jpg"
+      type="image/x-icon"
+      style="border-radius: 50%"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="./scripts/script.js"></script>
+  </head>
+
+  <body id="body">
+    <nav>
+        <label class="logo">Sanuja Menath</label>
+        <a class="burger"><i class="fas fa-bars burger-icon"></i></a>
+        <ul>
+            <li>
+                <a href="#hello" id="one" class="one" onclick="setActiveLink(event)">Hello</a>
+            </li>
+            <li>
+                <a href="#about" id="two" class="two" onclick="setActiveLink(event)">About Me</a>
+            </li>
+            <li>
+                <a href="#projects" id="three" class="two" onclick="setActiveLink(event)">Portfolio</a>
+            </li>
+            <li>
+                <a href="#skills" id="four" class="three" onclick="setActiveLink(event)">Skills</a>
+            </li>
+            <li>
+                <a href="#contact" id="five" class="four" onclick="setActiveLink(event)">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <div class="box">
+      <img src="images/profile_image.jpg" id="profile-image" alt="" />
+      <span class="name">Sanuja Menath</span>
+    </div>
+
+    <div id="hello" class="info-panel">
+      <div class="greetings" id="greetings">
+        Welcome to My Portfolio !
+        <span class="greetings-underline"></span>
+      </div>
+      <div class="des">
+        <div class="my-profile">
+          Hi there! I'm Sanuja Menath, a passionate software engineer
+          specializing in backend development. I thrive on solving complex
+          technical challenges to create robust and scalable solutions.
+        </div>
+        <div class="description-picture">
+          <img src="images/software-engineer.jpg" alt="" class="svg" />
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="info-panel">
+      <div class="about-panel">
+          <div class="greetings" id="greetings">
+            About Me
+            <span class="greetings-underline"></span>
+          </div>
+          <div class="des">
+            
+              <p class="about-des">
+                Education: Bachelor of Science(Hons) in Software Engineering ( 3
+                year Degree ) from ICBT University. <br /><br />
+                Experience: 1 year of professional experience in software
+                development, with a focus on backend systems and APIs.
+                <br /><br />
+                Skills: Proficient in languages such as Python, Java, and C++, as
+                well as frameworks like Swing and Spring Boot. Experienced in
+                database management with MySQL and SQL Server databases.
+                <br /><br />
+                Interests: Outside of coding, I enjoy hiking, watching sci-fi
+                movies, and Enjoy playing video games as a way to unwind and have
+                fun.
+              </p>
+          
+            <!-- <div class="description-picture">
+              <img src="images/ngineer.jpg" alt="" class="svg" />
+            </div> -->
+          </div>
+      </div>
+    </div>
+
+    <div id="projects" class="info-panel">
+      <div class="projects-description" id="projects-description">
+        My Recent Projects
+        <span class="projects-description-underline"></span>
+      </div>
+
+      <div class="projects-container" id="projects">
+        <div class="projects-container-inner">
+          <div class="project">
+            <img src="images/zeerum.png" class="projects-img" alt="" />
+            <span class="title">Phira</span>
+            <span class="description">Dating Web Application</span>
+            <span class="link"
+              ><a href="https://zeerum.herokuapp.com/" target="_blank"
+                ><i class="fas fa-link"></i> visit the site</a
+              ></span
+            >
+          </div>
+          <div class="project">
+            <img src="images/calculator.png" class="projects-img" alt="" />
+            <span class="title">Gallery Cafe</span>
+            <span class="description">Web site for a Restaurant</span>
+            <span class="link"
+              ><a
+                href="https://calculator-simple-web.netlify.app/"
+                target="_blank"
+                ><i class="fas fa-link"></i> visit the site</a
+              ></span
+            >
+          </div>
+          <div class="project">
+            <img src="images/url-validator.png" class="projects-img" alt="" />
+            <span class="title">NutriPaws</span>
+            <span class="description">E-commerce Mobile App</span>
+            <span class="link"
+              ><a href="https://url-validator.netlify.app/" target="_blank"
+                ><i class="fas fa-link"></i> visit the site</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" class="info-panel">
+      <div class="skills" id="skills">
+        <span>My Skills </span>
+
+        <h4>HTML - 95%</h4>
+        <div class="html-bar">
+          <div class="html-bar-visible"></div>
+        </div>
+
+        <h4>JavaScript - 85%</h4>
+        <div class="js-bar">
+          <div class="js-bar-visible"></div>
+        </div>
+
+        <h4>CSS - 90%</h4>
+        <div class="css-bar">
+          <div class="css-bar-visible"></div>
+        </div>
+
+        <h4>NodeJS - 70%</h4>
+        <div class="nodejs-bar">
+          <div class="nodejs-bar-visible"></div>
+        </div>
+
+        <h4>Java - 60%</h4>
+        <div class="nodejs-bar">
+          <div class="nodejs-bar-visible"></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contact" class="section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Contact Me:</h3>
+          <ul>
+            <li>Email: sanujamenath@gmail.com</li>
+            <li>LinkedIn: linkedin.com/in/sanuja</li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <ul>
+            <br /><br />
+            <li>GitHub: github.com/sanujame</li>
+            <li>Phone: +94-764 567 890</li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="mailto:sanujamenath@gmail.com" class="far fa-envelope"></a>
+        <a
+          href="https://www.instagram.com/sanujamenath?igsh=MWZmaDd5ZnpybGxqOA=="
+          class="fab fa-instagram"
+        ></a>
+        <a href="https://www.facebook.com/login" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/i/flow/login" class="fab fa-twitter"></a>
+        <a href="https://www.linkedin.com/login" class="fab fa-linkedin-in"></a>
+        <a href="https://github.com/" class="fab fa-github"></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; 2024 Sanuja Menath. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+>>>>>>> Stashed changes
