@@ -3,204 +3,280 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Sanuja Menath - Full-Stack Developer</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="icon"
-      href="images/profile_image.jpg"
-      type="image/x-icon"
-      style="border-radius: 50%"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <script src="./scripts/script.js"></script>
   </head>
-
-  <body id="body">
-    <nav>
-        <label class="logo">Sanuja Menath</label>
-        <a class="burger"><i class="fas fa-bars burger-icon"></i></a>
-        <ul>
-            <li>
-                <a href="#hello" id="one" class="one" onclick="setActiveLink(event)">Hello</a>
-            </li>
-            <li>
-                <a href="#about" id="two" class="two" onclick="setActiveLink(event)">About Me</a>
-            </li>
-            <li>
-                <a href="#projects" id="three" class="two" onclick="setActiveLink(event)">Portfolio</a>
-            </li>
-            <li>
-                <a href="#skills" id="four" class="three" onclick="setActiveLink(event)">Skills</a>
-            </li>
-            <li>
-                <a href="#contact" id="five" class="four" onclick="setActiveLink(event)">Contact</a>
-            </li>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">SM</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
-    
 
-    <div class="box">
-      <img src="images/profile_image.jpg" id="profile-image" alt="" />
-      <span class="name">Sanuja Menath</span>
-    </div>
-
-    <div id="hello" class="info-panel">
-      <div class="greetings" id="greetings">
-        Welcome to My Portfolio !
-        <span class="greetings-underline"></span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="profile-image"></div>
+        <h1>Sanuja Menath</h1>
+        <p>Full-Stack Developer & UI/UX Designer</p>
+        <a href="#contact" class="cta-button">Get In Touch</a>
       </div>
-      <div class="des">
-        <div class="my-profile">
-          Hi there! I'm Sanuja Menath, a passionate software engineer
-          specializing in backend development. I thrive on solving complex
-          technical challenges to create robust and scalable solutions.
+      <!-- Floating particles -->
+      <div
+        class="particle"
+        style="
+          top: 20%;
+          left: 10%;
+          width: 10px;
+          height: 10px;
+          animation-delay: 0s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          top: 60%;
+          right: 10%;
+          width: 15px;
+          height: 15px;
+          animation-delay: 2s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          top: 80%;
+          left: 20%;
+          width: 8px;
+          height: 8px;
+          animation-delay: 4s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          top: 30%;
+          right: 30%;
+          width: 12px;
+          height: 12px;
+          animation-delay: 1s;
+        "
+      ></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Hello, I'm Sanuja!</h3>
+          <p>
+            I'm a passionate developer with 5+ years of experience creating
+            beautiful, functional digital experiences. I specialize in front-end
+            development and UI/UX design, with a keen eye for detail and a love
+            for clean, modern aesthetics.
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new design trends,
+            contributing to open-source projects, or enjoying a good cup of
+            coffee while sketching new ideas.
+          </p>
         </div>
-        <div class="description-picture">
-          <img src="images/software-engineer.jpg" alt="" class="svg" />
-        </div>
-      </div>
-    </div>
-
-    <div id="about" class="info-panel">
-      <div class="about-panel">
-          <div class="greetings" id="greetings">
-            About Me
-            <span class="greetings-underline"></span>
-          </div>
-          <div class="des">
-            
-              <p class="about-des">
-                Education: Bachelor of Science(Hons) in Software Engineering ( 3
-                year Degree ) from ICBT University. <br /><br />
-                Experience: 1 year of professional experience in software
-                development, with a focus on backend systems and APIs.
-                <br /><br />
-                Skills: Proficient in languages such as Python, Java, and C++, as
-                well as frameworks like Swing and Spring Boot. Experienced in
-                database management with MySQL and SQL Server databases.
-                <br /><br />
-                Interests: Outside of coding, I enjoy hiking, watching sci-fi
-                movies, and Enjoy playing video games as a way to unwind and have
-                fun.
-              </p>
-          
-            <!-- <div class="description-picture">
-              <img src="images/ngineer.jpg" alt="" class="svg" />
-            </div> -->
-          </div>
-      </div>
-    </div>
-
-    <div id="projects" class="info-panel">
-      <div class="projects-description" id="projects-description">
-        My Recent Projects
-        <span class="projects-description-underline"></span>
-      </div>
-
-      <div class="projects-container" id="projects">
-        <div class="projects-container-inner">
-          <div class="project">
-            <img src="images/zeerum.png" class="projects-img" alt="" />
-            <span class="title">Phira</span>
-            <span class="description">Dating Web Application</span>
-            <span class="link"
-              ><a href="https://zeerum.herokuapp.com/" target="_blank"
-                ><i class="fas fa-link"></i> visit the site</a
-              ></span
-            >
-          </div>
-          <div class="project">
-            <img src="images/calculator.png" class="projects-img" alt="" />
-            <span class="title">Gallery Cafe</span>
-            <span class="description">Web site for a Restaurant</span>
-            <span class="link"
-              ><a
-                href="https://calculator-simple-web.netlify.app/"
-                target="_blank"
-                ><i class="fas fa-link"></i> visit the site</a
-              ></span
-            >
-          </div>
-          <div class="project">
-            <img src="images/url-validator.png" class="projects-img" alt="" />
-            <span class="title">NutriPaws</span>
-            <span class="description">E-commerce Mobile App</span>
-            <span class="link"
-              ><a href="https://url-validator.netlify.app/" target="_blank"
-                ><i class="fas fa-link"></i> visit the site</a
-              ></span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="skills" class="info-panel">
-      <div class="skills" id="skills">
-        <span>My Skills </span>
-
-        <h4>HTML - 95%</h4>
-        <div class="html-bar">
-          <div class="html-bar-visible"></div>
-        </div>
-
-        <h4>JavaScript - 85%</h4>
-        <div class="js-bar">
-          <div class="js-bar-visible"></div>
-        </div>
-
-        <h4>CSS - 90%</h4>
-        <div class="css-bar">
-          <div class="css-bar-visible"></div>
-        </div>
-
-        <h4>NodeJS - 70%</h4>
-        <div class="nodejs-bar">
-          <div class="nodejs-bar-visible"></div>
-        </div>
-
-        <h4>Java - 60%</h4>
-        <div class="nodejs-bar">
-          <div class="nodejs-bar-visible"></div>
-        </div>
-      </div>
-    </div>
-
-    <section id="contact" class="section">
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Contact Me:</h3>
-          <ul>
-            <li>Email: sanujamenath@gmail.com</li>
-            <li>LinkedIn: linkedin.com/in/sanuja</li>
+        <div>
+          <h3 style="color: white; margin-bottom: 1rem">Qualifications</h3>
+          <ul class="qualifications">
+            <li>BSc(Hons) in Software Engineering - ICBT (2026)</li>
+            <li>BSc(Hons) in Information Systems - SUSL (2028)</li>
+            <li>Google UX Design Professional Certificate (2020)</li>
+            <li>AWS Certified Developer Associate (2021)</li>
           </ul>
         </div>
-        <div class="contact-info">
-          <ul>
-            <br /><br />
-            <li>GitHub: github.com/sanujame</li>
-            <li>Phone: +94-764 567 890</li>
-          </ul>
-        </div>
-      </div>
-      <div class="social-icons">
-        <a href="mailto:sanujamenath@gmail.com" class="far fa-envelope"></a>
-        <a
-          href="https://www.instagram.com/sanujamenath?igsh=MWZmaDd5ZnpybGxqOA=="
-          class="fab fa-instagram"
-        ></a>
-        <a href="https://www.facebook.com/login" class="fab fa-facebook-f"></a>
-        <a href="https://twitter.com/i/flow/login" class="fab fa-twitter"></a>
-        <a href="https://www.linkedin.com/login" class="fab fa-linkedin-in"></a>
-        <a href="https://github.com/" class="fab fa-github"></a>
       </div>
     </section>
 
-    <footer>
-      <p>Copyright &copy; 2024 Sanuja Menath. All rights reserved.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Frontend Development</h3>
+          <p style="color: rgba(255, 255, 255, 0.8)">
+            HTML, CSS, JavaScript, React, Next.js, Blade
+          </p>
+          <div class="skill-bar">
+            <div
+              class="skill-progress"
+              style="--skill-width: 90%; width: 90%"
+            ></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p style="color: rgba(255, 255, 255, 0.8)">
+            Figma, Adobe XD, Sketch, Photoshop
+          </p>
+          <div class="skill-bar">
+            <div
+              class="skill-progress"
+              style="--skill-width: 85%; width: 85%"
+            ></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend Development</h3>
+          <p style="color: rgba(255, 255, 255, 0.8)">
+            Node.js, Python, Spring Boot, Laravel, MySQL
+          </p>
+          <div class="skill-bar">
+            <div
+              class="skill-progress"
+              style="--skill-width: 75%; width: 75%"
+            ></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Cloud & DevOps</h3>
+          <p style="color: rgba(255, 255, 255, 0.8)">AWS, Docker, Git</p>
+          <div class="skill-bar">
+            <div
+              class="skill-progress"
+              style="--skill-width: 70%; width: 70%"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">🚀</div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>
+              A full-stack e-commerce solution for online clothing with modern UI/UX, payment
+              integration, and admin dashboard. Built with Blade and Laravel.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Blade</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Stripe</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">📱</div>
+          <div class="project-content">
+            <h3>Mobile Banking App</h3>
+            <p>
+              Intuitive mobile banking application with biometric
+              authentication, real-time transactions, and comprehensive
+              financial insights.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">🎵</div>
+          <div class="project-content">
+            <h3>Music Streaming Web App</h3>
+            <p>
+              Spotify-like music streaming platform with playlist management,
+              social features, and AI-powered recommendations.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">ML</span>
+              <span class="tag">WebAudio API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 style="color: white; margin-bottom: 2rem">Get In Touch</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Email</strong><br />
+              sanujamenath@gmail.com
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <strong>Phone</strong><br />
+              +94 760 620 999
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Location</strong><br />
+              Kalutara, Sri Lanka
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🔗</div>
+            <div>
+              <strong>LinkedIn</strong><br />
+              linkedin.com/in/sanujamenath
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Sanuja Menath.</p>
     </footer>
+
+    <script src="./scripts/script.js" ></script>
   </body>
 </html>
