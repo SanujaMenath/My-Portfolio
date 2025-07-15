@@ -1,16 +1,17 @@
+/* Reset & Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
+  background: linear-gradient(135deg, #1f1f2f 0%, #111118 100%);
   overflow-x: hidden;
 }
 
@@ -19,7 +20,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(20, 20, 30, 0.95);
   backdrop-filter: blur(10px);
   padding: 1rem 2rem;
   z-index: 1000;
@@ -37,7 +38,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #667eea;
+  color: #64ffda;
 }
 
 .nav-links {
@@ -48,14 +49,14 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: #ccc;
+  font-weight: 700;
   transition: color 0.3s ease;
   position: relative;
 }
 
 .nav-links a:hover {
-  color: #667eea;
+  color: #64ffda;
 }
 
 .nav-links a::after {
@@ -65,7 +66,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #667eea;
+  background: #64ffda;
   transition: width 0.3s ease;
 }
 
@@ -76,7 +77,7 @@ body {
 .nav-links.active {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(30, 30, 40, 0.95);
   position: absolute;
   top: 70px;
   right: 2rem;
@@ -84,8 +85,6 @@ body {
   padding: 1rem;
   z-index: 1000;
 }
-
-
 
 .mobile-menu {
   display: none;
@@ -96,7 +95,7 @@ body {
 .mobile-menu span {
   width: 25px;
   height: 3px;
-  background: #333;
+  background: #ccc;
   margin: 3px 0;
   transition: 0.3s;
 }
@@ -108,12 +107,11 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 .hero-content {
-  color: white;
+  color: #e0e0e0;
   max-width: 800px;
   padding: 2rem;
   animation: fadeInUp 1s ease;
@@ -124,9 +122,8 @@ body {
   height: 250px;
   border-radius: 50%;
   margin: 0 auto 2rem;
-  background: url('../images/profile_image.jpg')
-    center/cover;
-  border: 5px solid rgba(255, 255, 255, 0.3);
+  background: url("../images/profile_image.jpg") center/cover;
+  border: 5px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -136,8 +133,7 @@ body {
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #fff, #f0f0f0);
+  background: linear-gradient(45deg, #64ffda, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -146,14 +142,14 @@ body {
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .cta-button {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  color: #64ffda;
   padding: 1rem 2rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
@@ -162,17 +158,9 @@ body {
 }
 
 .cta-button:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(100, 255, 218, 0.1);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Floating particles */
-.particle {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
 }
 
 /* Section Styling */
@@ -186,7 +174,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: white;
+  color: #64ffda;
   position: relative;
 }
 
@@ -198,7 +186,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #64ffda, #a78bfa);
   border-radius: 2px;
 }
 
@@ -212,18 +200,18 @@ body {
   padding: 3rem;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .about-text {
-  color: white;
+  color: #e0e0e0;
   line-height: 1.8;
 }
 
 .about-text h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #f0f0f0;
+  color: #a78bfa;
 }
 
 .qualifications {
@@ -251,43 +239,48 @@ body {
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .skill-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #64ffda;
 }
 
 .skill-card h3 {
-  color: white;
-  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.skill-card p{
+  margin: 1rem 0 ;
+  color: rgb(220, 221, 221);
 }
 
 .skill-bar {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1rem 1rem;
   height: 8px;
   border-radius: 4px;
-  margin-top: 1rem;
+  position: relative;
   overflow: hidden;
 }
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #64ffda, #a78bfa);
   border-radius: 4px;
-  animation: fillSkill 2s ease-in-out;
+  transition: width 0.6s ease;
 }
 
 /* Projects Section */
@@ -299,11 +292,11 @@ body {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -313,7 +306,7 @@ body {
 
 .project-image {
   height: 200px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #64ffda, #a78bfa);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,7 +316,7 @@ body {
 
 .project-content {
   padding: 2rem;
-  color: white;
+  color: #e0e0e0;
 }
 
 .project-content h3 {
@@ -339,11 +332,11 @@ body {
 }
 
 .tag {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
-  color: white;
+  color: #64ffda;
 }
 
 /* Contact Section */
@@ -354,37 +347,33 @@ body {
   margin-top: 2rem;
 }
 
-.contact-info {
-  background: rgba(255, 255, 255, 0.1);
+.contact-info,
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
-  color: white;
+  color: #e0e0e0;
 }
 
 .contact-icon {
   font-size: 1.5rem;
   margin-right: 1rem;
   width: 40px;
-}
-
-.contact-form {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
+  color: #64ffda;
 }
 
 .form-group input,
@@ -393,18 +382,18 @@ body {
   padding: 1rem;
   border: none;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
   backdrop-filter: blur(5px);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .submit-btn {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #64ffda, #a78bfa);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -421,7 +410,7 @@ body {
 
 /* Footer */
 .footer {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   color: white;
   text-align: center;
   padding: 2rem;
@@ -441,8 +430,7 @@ body {
 }
 
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {
@@ -509,4 +497,3 @@ body {
     height: 150px;
   }
 }
-
