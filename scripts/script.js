@@ -44,7 +44,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-
 // Intersection Observer for animations
 const observerOptions = {
   threshold: 0.1,
@@ -87,38 +86,29 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 skillBars.forEach((bar) => skillObserver.observe(bar));
 
-// Form submission
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+// Contact form submission
+function sendEmail() {
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+    time: new Date().toLocaleString(),
+  };
 
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[placeholder="Your Name"]').value;
-    const email = this.querySelector('input[placeholder="Your Email"]').value;
-    const subject = this.querySelector('input[placeholder="Subject"]').value;
-    const message = this.querySelector("textarea").value;
+  emailjs
+    .send("service_rf263jd", "template_7gvrrsj", params)
+    .then(
+      () => {
+        alert("Email sent successfully!");
+      },
+      (err) => {
+        console.error("Failed to send email:", err);
+        alert("Something went wrong. Please try again.");
+      }
+    );
+}
 
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    // Simulate form submission
-    const submitBtn = this.querySelector(".submit-btn");
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      alert("Thank you for your message! I'll get back to you soon.");
-      this.reset();
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }, 2000);
-  });
 
 // Mobile menu toggle
 const mobileMenu = document.querySelector(".mobile-menu");
