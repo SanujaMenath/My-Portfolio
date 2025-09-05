@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal Portfolio of Sanuja Menath - Full-Stack Developer." />
+    <meta
+      name="description"
+      content="Personal Portfolio of Sanuja Menath - Full-Stack Developer."
+    />
     <meta name="author" content="Sanuja Menath" />
     <meta name="robots" content="index, follow" />
     <title>Sanuja Menath - Full-Stack Developer</title>
@@ -15,6 +18,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "3cKwWQY4Y7DysxCXs",
+        });
+      })();
+    </script>
   </head>
   <body>
     <!-- Navigation -->
@@ -40,13 +55,27 @@
         <div class="profile-image" aria-hidden="true"></div>
         <h1>Sanuja Menath</h1>
         <p>Full-Stack Developer & UI/UX Designer</p>
-        <a href="#contact" class="cta-button" aria-label="Contact Sanuja">Get In Touch</a>
+        <a href="#contact" class="cta-button" aria-label="Contact Sanuja"
+          >Get In Touch</a
+        >
       </div>
       <!-- Floating particles -->
-      <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s"></div>
-      <div class="particle" style="top: 60%; right: 10%; animation-delay: 2s"></div>
-      <div class="particle" style="top: 80%; left: 20%; animation-delay: 4s"></div>
-      <div class="particle" style="top: 30%; right: 30%; animation-delay: 1s"></div>
+      <div
+        class="particle"
+        style="top: 20%; left: 10%; animation-delay: 0s"
+      ></div>
+      <div
+        class="particle"
+        style="top: 60%; right: 10%; animation-delay: 2s"
+      ></div>
+      <div
+        class="particle"
+        style="top: 80%; left: 20%; animation-delay: 4s"
+      ></div>
+      <div
+        class="particle"
+        style="top: 30%; right: 30%; animation-delay: 1s"
+      ></div>
     </section>
 
     <!-- About Section -->
@@ -55,8 +84,14 @@
       <div class="about-content">
         <div class="about-text">
           <h3>Hello, I'm Sanuja!</h3>
-          <p>I'm a passionate developer with 5+ years of experience creating digital experiences...</p>
-          <p>When I'm not coding, I enjoy design trends, open-source, and coffee-fueled sketches.</p>
+          <p>
+            I'm a passionate developer with 5+ years of experience creating
+            digital experiences...
+          </p>
+          <p>
+            When I'm not coding, I enjoy design trends, open-source, and
+            coffee-fueled sketches.
+          </p>
         </div>
         <div>
           <h3 style="color: white; margin-bottom: 1rem">Qualifications</h3>
@@ -77,26 +112,37 @@
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Frontend Development</h3>
-          <p>HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, React, Next.js, Blade</p>
-          <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+          <p>
+            HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, React, Next.js,
+            Blade
+          </p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-palette"></i></div>
           <h3>UI/UX Design</h3>
           <p>Figma, Adobe XD, Sketch, Canva</p>
-          <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-cogs"></i></div>
           <h3>Backend Development</h3>
           <p>Laravel,Spring Boot, Node.js, Python, MySQL</p>
-          <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-cloud"></i></div>
           <h3>Cloud & DevOps</h3>
-          <p>Docker, Git, Netlify, Vercel </p>
-          <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+          <p>Docker, Git, Netlify, Vercel</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -109,9 +155,12 @@
           <div class="project-image"><i class="fas fa-rocket"></i></div>
           <div class="project-content">
             <h3>E-Commerce Platform</h3>
-            <p>A full-stack e-commerce solution built with Blade and Laravel.</p>
+            <p>
+              A full-stack e-commerce solution built with Blade and Laravel.
+            </p>
             <div class="project-tags">
-              <span class="tag">Blade</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Stripe</span>
+              <span class="tag">Blade</span><span class="tag">Laravel</span
+              ><span class="tag">MySQL</span><span class="tag">Stripe</span>
             </div>
           </div>
         </div>
@@ -119,9 +168,13 @@
           <div class="project-image"><i class="fas fa-mobile-alt"></i></div>
           <div class="project-content">
             <h3>Mobile E-commerce app</h3>
-            <p>E-commerce app with product listings, cart, and checkout features.</p>
+            <p>
+              E-commerce app with product listings, cart, and checkout features.
+            </p>
             <div class="project-tags">
-              <span class="tag">Java</span><span class="tag">SQLite</span><span class="tag">UI/UX</span><span class="tag">Android Studio</span>
+              <span class="tag">Java</span><span class="tag">SQLite</span
+              ><span class="tag">UI/UX</span
+              ><span class="tag">Android Studio</span>
             </div>
           </div>
         </div>
@@ -129,9 +182,14 @@
           <div class="project-image"><i class="fas fa-database"></i></div>
           <div class="project-content">
             <h3>Investigation Database Web App</h3>
-            <p>A web application for managing investigation case meta-data and reports.</p>
+            <p>
+              A web application for managing investigation case meta-data and
+              reports.
+            </p>
             <div class="project-tags">
-              <span class="tag">React</span><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Rest API</span>
+              <span class="tag">React</span><span class="tag">Java</span
+              ><span class="tag">Spring Boot</span
+              ><span class="tag">Rest API</span>
             </div>
           </div>
         </div>
@@ -153,32 +211,72 @@
             <div><strong>Phone</strong><br />+94 760 620 999</div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
             <div><strong>Location</strong><br />Kalutara, Sri Lanka</div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-            <div><strong>LinkedIn</strong><br /><a href="https://linkedin.com/in/sanujamenath">linkedin.com/in/sanujamenath</a></div>
+            <div>
+              <strong>LinkedIn</strong><br /><a
+                href="https://linkedin.com/in/sanujamenath"
+                >linkedin.com/in/sanujamenath</a
+              >
+            </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fab fa-github"></i></div>
-            <div><strong>GitHub</strong><br /><a href="https://github.com/sanujamenath">github.com/sanujamenath</a></div>
+            <div>
+              <strong>GitHub</strong><br /><a
+                href="https://github.com/sanujamenath"
+                >github.com/sanujamenath</a
+              >
+            </div>
           </div>
         </div>
         <form class="contact-form" aria-label="Contact Form">
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required aria-label="Name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              aria-label="Name"
+            />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Your Email" required aria-label="Email" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              aria-label="Email"
+            />
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Subject" required aria-label="Subject" />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+              required
+              aria-label="Subject"
+            />
           </div>
           <div class="form-group">
-            <textarea rows="5" placeholder="Your Message" required aria-label="Message"></textarea>
+            <textarea
+              rows="5"
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              required
+              aria-label="Message"
+            ></textarea>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="submit" class="submit-btn" onclick="sendEmail()">Send Message</button>
         </form>
       </div>
     </section>
