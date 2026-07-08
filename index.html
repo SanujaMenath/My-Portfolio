@@ -5,11 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Personal Portfolio of Sanuja Menath - Full-Stack Developer."
+      content="Personal Portfolio of Sanuja Menath - Full-Stack Developer & UI/UX Designer."
     />
     <meta name="author" content="Sanuja Menath" />
     <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta
+      property="og:title"
+      content="Sanuja Menath - Full-Stack Developer & UI/UX Designer"
+    />
+    <meta
+      property="og:description"
+      content="Personal portfolio of Sanuja Menath, a passionate Full-Stack Developer and UI/UX Designer."
+    />
+    <meta
+      property="og:image"
+      content="https://sanujamenath.github.io/My-Portfolio/images/profile_image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://sanujamenath.github.io/My-Portfolio/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sanuja Menath - Full-Stack Developer & UI/UX Designer"
+    />
+    <meta
+      name="twitter:description"
+      content="Personal portfolio of Sanuja Menath."
+    />
+
     <title>Sanuja Menath - Full-Stack Developer</title>
+
     <link rel="stylesheet" href="./styles/styles.css" />
     <link
       rel="stylesheet"
@@ -17,21 +49,43 @@
       integrity="sha512-..."
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </noscript>
 
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      defer
     ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "3cKwWQY4Y7DysxCXs",
-        });
-      })();
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sanuja Menath",
+        "url": "https://sanujamenath.github.io/My-Portfolio/",
+        "image": "https://sanujamenath.github.io/My-Portfolio/images/profile_image.jpg",
+        "jobTitle": "Full-Stack Developer & UI/UX Designer",
+        "sameAs": [
+          "https://github.com/sanujamenath",
+          "https://linkedin.com/in/sanujamenath"
+        ],
+        "email": "sanujamenath@gmail.com"
+      }
     </script>
   </head>
   <body>
+    <a href="#home" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
     <nav class="navbar" aria-label="Main Navigation">
       <div class="nav-container">
@@ -43,9 +97,22 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="mobile-menu" aria-label="Toggle Navigation Menu">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark/light mode"
+          type="button"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+        <button
+          class="mobile-menu"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded="false"
+          type="button"
+        >
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </div>
     </nav>
 
@@ -60,22 +127,10 @@
         >
       </div>
       <!-- Floating particles -->
-      <div
-        class="particle"
-        style="top: 20%; left: 10%; animation-delay: 0s"
-      ></div>
-      <div
-        class="particle"
-        style="top: 60%; right: 10%; animation-delay: 2s"
-      ></div>
-      <div
-        class="particle"
-        style="top: 80%; left: 20%; animation-delay: 4s"
-      ></div>
-      <div
-        class="particle"
-        style="top: 30%; right: 30%; animation-delay: 1s"
-      ></div>
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
     </section>
 
     <!-- About Section -->
@@ -94,7 +149,7 @@
           </p>
         </div>
         <div>
-          <h3 style="color: white; margin-bottom: 1rem">Qualifications</h3>
+          <h3 class="qualifications-heading">Qualifications</h3>
           <ul class="qualifications">
             <li>BSc(Hons) in Software Engineering - ICBT (2026)</li>
             <li>BSc(Hons) in Information Systems - SUSL (2028)</li>
@@ -113,35 +168,35 @@
           <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Frontend Development</h3>
           <p>
-            HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, React, Next.js,
-            Blade
+            HTML, CSS, Tailwind CSS, JavaScript, React, Next.js,
+            Flutter, React Native
           </p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%"></div>
+            <div class="skill-progress" data-width="90%"></div>
           </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-palette"></i></div>
           <h3>UI/UX Design</h3>
-          <p>Figma, Adobe XD, Sketch, Canva</p>
+          <p>Figma, Canva</p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width: 85%"></div>
+            <div class="skill-progress" data-width="85%"></div>
           </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-cogs"></i></div>
           <h3>Backend Development</h3>
-          <p>Laravel,Spring Boot, Node.js, Python, MySQL</p>
+          <p>Laravel, Spring Boot, FastAPI, Tauri, MySQL</p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width: 75%"></div>
+            <div class="skill-progress" data-width="75%"></div>
           </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-cloud"></i></div>
           <h3>Cloud & DevOps</h3>
-          <p>Docker, Git, Netlify, Vercel</p>
+          <p>Podman, Git, Netlify, Vercel</p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width: 70%"></div>
+            <div class="skill-progress" data-width="70%"></div>
           </div>
         </div>
       </div>
@@ -151,48 +206,55 @@
     <section id="projects" class="section" role="region" aria-label="Projects">
       <h2 class="section-title">Featured Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image"><i class="fas fa-rocket"></i></div>
-          <div class="project-content">
-            <h3>E-Commerce Platform</h3>
-            <p>
-              A full-stack e-commerce solution built with Blade and Laravel.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Blade</span><span class="tag">Laravel</span
-              ><span class="tag">MySQL</span><span class="tag">Stripe</span>
+        <a href="https://github.com/SanujaMenath/Faith-Culture" target="_blank" rel="noopener" class="project-card-link">
+          <div class="project-card">
+            <div class="project-image"><i class="fas fa-rocket"></i></div>
+            <div class="project-content">
+              <h3>E-Commerce Platform</h3>
+              <p>
+                A full-stack e-commerce solution built with Blade and Laravel. Integrated Stripe for secure payment processing and MySQL for data management.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Blade</span><span class="tag">Laravel</span
+                ><span class="tag">MySQL</span><span class="tag">Stripe</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image"><i class="fas fa-mobile-alt"></i></div>
-          <div class="project-content">
-            <h3>Mobile E-commerce app</h3>
-            <p>
-              E-commerce app with product listings, cart, and checkout features.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Java</span><span class="tag">SQLite</span
-              ><span class="tag">UI/UX</span
-              ><span class="tag">Android Studio</span>
+        </a>
+        <a href="https://github.com/SanujaMenath/MoneyFlow" target="_blank" rel="noopener" class="project-card-link">
+          <div class="project-card">
+            <div class="project-image"><i class="fas fa-wallet"></i></div>
+            <div class="project-content">
+              <h3>MoneyFlow</h3>
+              <p>
+                Cross-platform income & expense tracker built with Tauri,
+                Supabase, and React Native.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Tauri</span><span class="tag">Supabase</span
+                ><span class="tag">React Native</span
+                ><span class="tag">Cross-Platform</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image"><i class="fas fa-database"></i></div>
-          <div class="project-content">
-            <h3>Investigation Database Web App</h3>
-            <p>
-              A web application for managing investigation case meta-data and
-              reports.
-            </p>
-            <div class="project-tags">
-              <span class="tag">React</span><span class="tag">Java</span
-              ><span class="tag">Spring Boot</span
-              ><span class="tag">Rest API</span>
+        </a>
+        <a href="https://github.com/SanujaMenath/Sentry-Pod" target="_blank" rel="noopener" class="project-card-link">
+          <div class="project-card">
+            <div class="project-image"><i class="fas fa-shield-alt"></i></div>
+            <div class="project-content">
+              <h3>Sentry-Pod</h3>
+              <p>
+                Group project - AI powered Network Monitoring System built with Podman,
+                FastAPI, React, MongoDB, and HuggingFace.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Podman</span><span class="tag">FastAPI</span
+                ><span class="tag">React</span><span class="tag">MongoDB</span
+                ><span class="tag">HuggingFace</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -201,7 +263,7 @@
       <h2 class="section-title">Let's Connect</h2>
       <div class="contact-content">
         <div class="contact-info">
-          <h3 style="color: white; margin-bottom: 2rem">Get In Touch</h3>
+          <h3 class="contact-heading">Get In Touch</h3>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div><strong>Email</strong><br />sanujamenath@gmail.com</div>
@@ -221,6 +283,8 @@
             <div>
               <strong>LinkedIn</strong><br /><a
                 href="https://linkedin.com/in/sanujamenath"
+                target="_blank"
+                rel="noopener"
                 >linkedin.com/in/sanujamenath</a
               >
             </div>
@@ -230,12 +294,14 @@
             <div>
               <strong>GitHub</strong><br /><a
                 href="https://github.com/sanujamenath"
+                target="_blank"
+                rel="noopener"
                 >github.com/sanujamenath</a
               >
             </div>
           </div>
         </div>
-        <form class="contact-form" aria-label="Contact Form">
+        <form class="contact-form" id="contact-form" aria-label="Contact Form" novalidate>
           <div class="form-group">
             <input
               type="text"
@@ -245,6 +311,7 @@
               required
               aria-label="Name"
             />
+            <span class="field-error" role="alert"></span>
           </div>
           <div class="form-group">
             <input
@@ -255,6 +322,7 @@
               required
               aria-label="Email"
             />
+            <span class="field-error" role="alert"></span>
           </div>
           <div class="form-group">
             <input
@@ -265,6 +333,7 @@
               required
               aria-label="Subject"
             />
+            <span class="field-error" role="alert"></span>
           </div>
           <div class="form-group">
             <textarea
@@ -275,15 +344,17 @@
               required
               aria-label="Message"
             ></textarea>
+            <span class="field-error" role="alert"></span>
           </div>
-          <button type="submit" class="submit-btn" onclick="sendEmail()">Send Message</button>
+          <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2024 Sanuja Menath.</p>
+      <p>&copy; 2026 Sanuja Menath.</p>
     </footer>
 
     <script src="./scripts/script.js" defer></script>
