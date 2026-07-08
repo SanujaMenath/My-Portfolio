@@ -242,6 +242,42 @@
     setTheme(isLight ? "dark" : "light");
   });
 
+  // ===== Typing Animation =====
+  (function typeWriter() {
+    const el = document.getElementById("typed-text");
+    const text = "Full-Stack Developer & UI/UX Designer";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 45 + Math.random() * 30);
+      }
+    }
+    type();
+  })();
+
+  // ===== Scroll to Top =====
+  const scrollTopBtn = document.getElementById("scroll-top");
+
+  // Scroll-to-top click handler
+  scrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Show/hide on scroll (added to existing handleScroll)
+  const origHandleScroll = handleScroll;
+  handleScroll = function () {
+    origHandleScroll();
+    const hero = document.getElementById("home");
+    if (window.scrollY > hero.offsetHeight * 0.5) {
+      scrollTopBtn.classList.add("visible");
+    } else {
+      scrollTopBtn.classList.remove("visible");
+    }
+  };
+  handleScroll(); // initial check
+
   // ===== Particle System (Bounded) =====
   const MAX_PARTICLES = 12;
   let activeParticles = 0;

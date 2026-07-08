@@ -21,7 +21,7 @@
     />
     <meta
       property="og:image"
-      content="https://sanujamenath.github.io/My-Portfolio/images/profile_image.jpg"
+      content="https://sanujamenath.github.io/My-Portfolio/images/profile_image.webp"
     />
     <meta
       property="og:url"
@@ -121,10 +121,11 @@
       <div class="hero-content">
         <div class="profile-image" aria-hidden="true"></div>
         <h1>Sanuja Menath</h1>
-        <p>Full-Stack Developer & UI/UX Designer</p>
-        <a href="#contact" class="cta-button" aria-label="Contact Sanuja"
-          >Get In Touch</a
-        >
+        <p><span id="typed-text"></span><span class="cursor" aria-hidden="true">|</span></p>
+        <div class="hero-buttons">
+          <a href="#contact" class="cta-button" aria-label="Contact Sanuja">Get In Touch</a>
+          <a href="resume.pdf" class="cta-button cta-button-secondary" download aria-label="Download Resume"><i class="fas fa-download"></i> Resume</a>
+        </div>
       </div>
       <!-- Floating particles -->
       <div class="particle particle-1"></div>
@@ -223,7 +224,7 @@
         </a>
         <a href="https://github.com/SanujaMenath/MoneyFlow" target="_blank" rel="noopener" class="project-card-link">
           <div class="project-card">
-            <div class="project-image"><i class="fas fa-wallet"></i></div>
+            <div class="project-image project-image-moneyflow"><i class="fas fa-wallet"></i></div>
             <div class="project-content">
               <h3>MoneyFlow</h3>
               <p>
@@ -351,6 +352,11 @@
         </form>
       </div>
     </section>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" type="button">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
