@@ -240,7 +240,7 @@ body {
   height: 250px;
   border-radius: 50%;
   margin: 0 auto 2rem;
-  background: url("../images/profile_image.jpg") center/cover;
+  background: url("../images/profile_image.webp") center/cover;
   border: 5px solid var(--profile-border);
   transition: transform 0.3s ease;
 }
@@ -261,6 +261,45 @@ body {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   opacity: 0.85;
+  min-height: 1.6em;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+  font-weight: 100;
+  color: var(--primary);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--secondary);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cta-button-secondary:hover {
+  background: rgba(167, 139, 250, 0.1);
+  color: var(--secondary);
+}
+
+body.light-mode .cta-button-secondary {
+  color: var(--secondary);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .cta-button-secondary:hover {
+  background: rgba(124, 58, 237, 0.1);
 }
 
 .cta-button {
@@ -459,6 +498,7 @@ body.light-mode .skill-card p {
   background: var(--glass);
   border-radius: 15px;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: var(--border-glass);
   transition: transform 0.3s ease;
@@ -475,6 +515,12 @@ body.light-mode .skill-card p {
   justify-content: center;
   font-size: 3rem;
   color: var(--white);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-image-moneyflow {
+  background-image: url("../images/MoneyFlow.png");
 }
 
 .project-content {
@@ -656,6 +702,42 @@ body.light-mode .form-feedback.success {
   transform: none;
 }
 
+/* ===== Scroll to Top ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass);
+  color: var(--primary);
+  border: var(--border-glass);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--glass-hover);
+  border-color: var(--primary);
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--footer-bg);
@@ -752,6 +834,11 @@ body.light-mode .form-feedback.success {
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
   .section-title {
