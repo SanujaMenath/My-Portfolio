@@ -523,6 +523,10 @@ body.light-mode .skill-card p {
   background-image: url("../images/MoneyFlow.png");
 }
 
+.project-image-edumetrics {
+  background-image: url("../images/EduMetrics.png");
+}
+
 .project-content {
   padding: 2rem;
   color: var(--text);
