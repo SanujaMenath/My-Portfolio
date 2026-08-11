@@ -1,6 +1,6 @@
 # My Portfolio
 
-Personal portfolio website of [Sanuja Menath](https://github.com/sanujamenath) — Full-Stack Developer & UI/UX Designer.
+Personal portfolio website of [Sanuja Menath](https://github.com/sanujamenath) - Full-Stack Developer & UI/UX Designer.
 
 ## Features
 
@@ -15,10 +15,10 @@ Personal portfolio website of [Sanuja Menath](https://github.com/sanujamenath) �
 
 ## Tech Stack
 
-- **HTML5** — Semantic markup
-- **CSS3** — Custom properties, Flexbox, Grid, Glassmorphism, Responsive design
-- **Vanilla JavaScript** — Intersection Observer, DOM manipulation, ES6+
-- **Font Awesome 6.5.0** — Icons (loaded non-blocking)
+- **HTML5** - Semantic markup
+- **CSS3** - Custom properties, Flexbox, Grid, Glassmorphism, Responsive design
+- **Vanilla JavaScript** - Intersection Observer, DOM manipulation, ES6+
+- **Font Awesome 6.5.0** - Icons (loaded non-blocking)
 - **EmailJS** — Contact form delivery (no server required)
 
 ## Getting Started
